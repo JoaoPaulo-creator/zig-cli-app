@@ -3,7 +3,7 @@ const std = @import("std");
 pub fn main() !void {
     const args = try std.process.argsAlloc(std.heap.page_allocator);
     if (args.len == 0 or args.len < 2) {
-        std.debug.print("{any}", .{"Informe dois ou ais parametros, para dar sequencia no bagulho!"});
+        std.debug.print("{any}", .{"Informe dois ou mais parâmetros, para dar sequencia no bagulho!"});
     }
 
     // mainloop
@@ -27,7 +27,7 @@ fn showUsage() []const u8 {
         \\ <env>     ambiente que deseja realizar uma chamada dev
         \\
         \\
-        \\ -h --help fala por si só, né amigo?
+        \\ -h --help esse comando fala por si só, né amigo?
     ;
 
     return usage;
